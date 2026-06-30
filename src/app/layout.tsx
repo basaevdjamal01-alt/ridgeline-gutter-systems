@@ -78,11 +78,6 @@ const localBusinessSchema = {
     addressRegion: 'Minnesota',
     addressCountry: 'US',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: site.trust.rating,
-    reviewCount: site.trust.reviewCount,
-  },
   areaServed: site.region.label,
 };
 

@@ -9,7 +9,16 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    const { name, email, phone } = data ?? {};
+    const {
+      name,
+      email,
+      phone,
+      city,
+      service,
+      propertyType,
+      details,
+      contactMethod,
+    } = data ?? {};
     if (!name || (!email && !phone)) {
       return NextResponse.json(
         { ok: false, error: 'Missing required fields.' },
@@ -23,7 +32,11 @@ export async function POST(request: Request) {
       name,
       email,
       phone,
-      service: data.service,
+      city,
+      service,
+      propertyType,
+      details,
+      contactMethod,
       receivedAt: new Date().toISOString(),
     });
 

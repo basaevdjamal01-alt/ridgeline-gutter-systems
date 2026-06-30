@@ -1,7 +1,6 @@
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { Icon, type IconName } from '@/components/icons';
-import { StarRating } from '@/components/ui/StarRating';
 import { Reveal } from '@/components/motion/Reveal';
 import { site } from '@/lib/site';
 import { telHref } from '@/lib/utils';
@@ -30,10 +29,8 @@ export function CtaBand({
         <Reveal>
           <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
             <div className="mb-5 flex items-center gap-2 rounded-full bg-bone/15 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
-              <StarRating rating={site.trust.rating} starClassName="h-3.5 w-3.5 text-bone" />
-              <span>
-                {site.trust.rating}/5 from {site.trust.reviewCount}+ homeowners
-              </span>
+              <Icon name="shield" className="h-4 w-4 text-bone" />
+              <span>{site.trust.localService}</span>
             </div>
 
             <h2 className="text-h1 text-bone">{title}</h2>

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Hero } from '@/components/sections/Hero';
 import { TrustBar } from '@/components/sections/TrustBar';
 import { WhyChooseRidgeline } from '@/components/sections/WhyChooseRidgeline';
@@ -9,9 +10,16 @@ import { Testimonials } from '@/components/sections/Testimonials';
 import { ServiceAreasSection } from '@/components/sections/ServiceAreasSection';
 import { Faq } from '@/components/sections/Faq';
 import { CtaBand } from '@/components/sections/CtaBand';
+import { site } from '@/lib/site';
 
-export default function HomePage() {
-  return (
+export const metadata: Metadata = {
+  title: `${site.name} — Seamless Gutters in Minnesota`,
+  description:
+    'Minnesota seamless gutter installation, gutter guards, cleaning, and repairs. Custom 5" and 6" K-style systems formed on-site. Request a free estimate.',
+  alternates: { canonical: '/' },
+};
+
+export default function HomePage() {  return (
     <>
       <Hero />
       <TrustBar />

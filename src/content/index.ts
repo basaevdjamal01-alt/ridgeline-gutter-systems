@@ -31,7 +31,7 @@ export const services: Service[] = [
       'Free on-site engineering assessment',
       'K-style & half-round profiles',
       'Hidden hangers every 24"',
-      '25-year workmanship warranty',
+      'Written workmanship warranty',
     ],
     intro:
       'A gutter system is only as good as the math behind it. We measure your roof’s pitch, surface area, and rainfall load to spec the right capacity, slope, and downspout placement — then install it to last decades.',
@@ -199,13 +199,13 @@ export const processSteps: ProcessStep[] = [
   {
     number: '03',
     title: 'Precision Installation',
-    body: 'Our own crews (never subcontractors) form and install on-site, protecting your landscaping and leaving the site spotless.',
+    body: 'Our trained installation crews form and install on-site, protecting your landscaping and leaving the site spotless.',
     icon: 'channel',
   },
   {
     number: '04',
     title: 'Final Walk & Warranty',
-    body: 'We water-test the system, walk it with you, and back the workmanship with our written multi-year warranty.',
+    body: 'We water-test the system, walk it with you, and back the workmanship with a clear written warranty.',
     icon: 'shield',
   },
 ];
@@ -215,13 +215,13 @@ export type Stat = { value: string; label: string };
 export const differentiators: { title: string; body: string; icon: IconName }[] =
   [
     {
-      title: 'Our own crews, never subs',
-      body: 'Every job is done by trained, background-checked employees who take pride in the details.',
+      title: 'Trained installation crews',
+      body: 'Every job is handled by trained installers who take pride in the details and respect your property.',
       icon: 'users',
     },
     {
       title: 'Written workmanship warranty',
-      body: 'We stand behind our installs with one of the longest warranties in the region.',
+      body: 'We stand behind our installs with a clear written workmanship warranty.',
       icon: 'shield',
     },
     {
@@ -235,6 +235,45 @@ export const differentiators: { title: string; body: string; icon: IconName }[] 
       icon: 'clipboard',
     },
   ];
+
+export type CustomerExpectation = {
+  title: string;
+  body: string;
+  icon: IconName;
+};
+
+export const customerExpectations: CustomerExpectation[] = [
+  {
+    title: 'Clear written estimates',
+    body: 'Upfront pricing with no pressure — you know what is included before work begins.',
+    icon: 'clipboard',
+  },
+  {
+    title: 'Clean, respectful job sites',
+    body: 'We protect landscaping, work neatly, and leave your property tidy when we finish.',
+    icon: 'home',
+  },
+  {
+    title: 'Photo-documented work',
+    body: 'Important steps are documented so you can see what was done and why it matters.',
+    icon: 'checkCircle',
+  },
+  {
+    title: 'Proper water-flow solutions',
+    body: 'Systems are engineered for pitch, capacity, and drainage — not just a quick install.',
+    icon: 'droplet',
+  },
+  {
+    title: 'Fast communication',
+    body: 'Questions get answered promptly, with clear next steps from estimate through completion.',
+    icon: 'phone',
+  },
+  {
+    title: 'Professional finish',
+    body: 'Seamless lines, secure hangers, and a polished look that complements your home.',
+    icon: 'shield',
+  },
+];
 
 export type Testimonial = {
   quote: string;
@@ -316,12 +355,12 @@ export const faqs: Faq[] = [
   {
     question: 'Are you licensed and insured?',
     answer:
-      'Yes. We are fully licensed and carry both liability and workers’ compensation insurance. We’re happy to provide certificates on request, and all of our installers are trained, background-checked employees — never subcontractors.',
+      'Yes. We are fully licensed and carry both liability and workers’ compensation insurance. We’re happy to provide certificates on request, and our installers are trained installation crews focused on quality workmanship.',
   },
   {
     question: 'What kind of warranty do you offer?',
     answer:
-      'We back our installations with a written multi-year workmanship warranty, in addition to manufacturer warranties on materials and guard systems. We’ll walk you through exactly what’s covered before any work begins.',
+      'We back our installations with a written workmanship warranty, in addition to manufacturer warranties on materials and guard systems. We’ll walk you through exactly what’s covered before any work begins.',
   },
   {
     question: 'How long does an installation take?',
@@ -359,62 +398,62 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Craftsman Bungalow Restoration',
-    location: 'Saint Paul, MN',
+    title: 'Example: Seamless Copper Profile',
+    location: 'Minnesota residential',
     service: 'Seamless Copper',
     summary:
-      'Historic home outfitted with custom half-round copper gutters hand-formed on-site to match the period architecture.',
-    stat: '210 ft · Half-round copper',
+      'Example of a custom half-round copper gutter run formed on-site to match period-style architecture.',
+    stat: 'Example project type',
     accent: 'copper',
     sky: 'dusk',
   },
   {
-    title: 'Modern Farmhouse New Build',
-    location: 'Maple Grove, MN',
+    title: 'Example: K-Style + Guards',
+    location: 'Minnesota residential',
     service: 'Installation + Guards',
     summary:
-      'Full K-style aluminum system with stainless micro-mesh guards across a steep, complex roofline.',
-    stat: '320 ft · K-style + guards',
+      'Example of a full K-style aluminum system with micro-mesh guards on a multi-plane roofline.',
+    stat: 'Example project type',
     accent: 'steel',
     sky: 'day',
   },
   {
-    title: 'Lakeside Two-Story',
-    location: 'Eagan, MN',
+    title: 'Example: Drainage Correction',
+    location: 'Minnesota residential',
     service: 'Repairs & Drainage',
     summary:
-      'Re-sloped runs and added buried drainage to pull storm water decisively away from the foundation.',
-    stat: 'Re-pitch · Buried drainage',
+      'Example of re-pitched runs and downspout routing to move water away from the foundation.',
+    stat: 'Example project type',
     accent: 'copper',
     sky: 'dawn',
   },
   {
-    title: 'Suburban Colonial',
-    location: 'Bloomington, MN',
+    title: 'Example: Seamless Aluminum Upgrade',
+    location: 'Minnesota residential',
     service: 'Seamless Gutters',
     summary:
-      'Replaced failing sectional gutters with seamless aluminum and color-matched downspouts.',
-    stat: '160 ft · Seamless aluminum',
+      'Example of replacing sectional gutters with seamless aluminum and matched downspouts.',
+    stat: 'Example project type',
     accent: 'steel',
     sky: 'day',
   },
   {
-    title: 'Wooded Ranch Retreat',
-    location: 'Plymouth, MN',
+    title: 'Example: Guard Retrofit',
+    location: 'Minnesota residential',
     service: 'Gutter Guards',
     summary:
-      'Heavy oak coverage solved for good with a full micro-mesh guard retrofit and downspout upgrade.',
-    stat: '140 ft · Micro-mesh retrofit',
+      'Example of a micro-mesh guard retrofit for homes with heavy leaf coverage.',
+    stat: 'Example project type',
     accent: 'copper',
     sky: 'day',
   },
   {
-    title: 'Downtown Brick Two-Flat',
-    location: 'Minneapolis, MN',
+    title: 'Example: Concealed Hanger Install',
+    location: 'Minnesota residential',
     service: 'Seamless Gutters',
     summary:
-      'Tight-tolerance seamless install on a historic masonry façade with concealed hangers.',
-    stat: '190 ft · Concealed hangers',
+      'Example of a tight-tolerance seamless install with concealed hangers on masonry or trim.',
+    stat: 'Example project type',
     accent: 'steel',
     sky: 'dusk',
   },

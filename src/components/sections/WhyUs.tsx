@@ -26,9 +26,9 @@ export function WhyUs() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 text-body-lg text-graphite-600">
-                For {site.trust.yearsInBusiness} years we’ve protected homes
-                across {site.region.label} the same way: with our own crews,
-                honest pricing, and a refusal to cut corners where it counts.
+                {site.name} helps homeowners across {site.region.label} solve
+                the same quiet, expensive problem: water going where it
+                shouldn&rsquo;t.
               </p>
             </Reveal>
             <Reveal delay={0.15}>

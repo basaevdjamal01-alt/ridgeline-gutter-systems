@@ -20,7 +20,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-2 text-sm text-bone/80">
               <Icon name="shield" className="h-4 w-4 text-copper-400" />
-              Licensed &amp; Insured · {site.trust.warrantyYears}-Year Warranty
+              {site.trust.licensedInsured}
             </div>
           </div>
 

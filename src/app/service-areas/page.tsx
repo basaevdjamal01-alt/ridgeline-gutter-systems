@@ -10,8 +10,9 @@ import { serviceAreas } from '@/content';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Service Areas',
-  description: `Gutter installation and cleaning across ${site.region.label}. Same-week scheduling available in most communities.`,
+  title: 'Minnesota Gutter Service Areas',
+  description:
+    'Ridgeline Gutter Systems serves homeowners across Minnesota with seamless gutter installation, guards, cleaning, and repairs. Call to confirm coverage in your city.',
   alternates: { canonical: '/service-areas' },
 };
 

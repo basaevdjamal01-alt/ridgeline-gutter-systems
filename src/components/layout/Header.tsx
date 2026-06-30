@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { Logo } from '@/components/layout/Logo';
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/icons';
-import { StarRating } from '@/components/ui/StarRating';
 import { mainNav, site } from '@/lib/site';
 import { cn, telHref } from '@/lib/utils';
 
@@ -48,10 +47,8 @@ export function Header() {
       >
         <div className="mx-auto flex h-10 max-w-content items-center justify-between px-8 text-xs">
           <div className="flex items-center gap-2">
-            <StarRating rating={site.trust.rating} starClassName="h-3 w-3" />
-            <span>
-              {site.trust.rating}/5 · {site.trust.reviewCount}+ reviews
-            </span>
+            <Icon name="shield" className="h-3.5 w-3.5 text-copper-400" />
+            <span>{site.trust.localService}</span>
             <span className="mx-2 text-bone/25">|</span>
             <span className="text-bone/60">
               Licensed &amp; Insured · {site.region.label}

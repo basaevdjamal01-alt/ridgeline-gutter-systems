@@ -11,17 +11,17 @@ import { differentiators } from '@/content';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Why Choose Us',
+  title: 'Why Choose Ridgeline',
   description:
-    'In-house crews, honest written pricing, on-site seamless forming, and one of the longest workmanship warranties in the region.',
+    'Trained installation crews, on-site seamless forming, upfront written pricing, and a clear written workmanship warranty for Minnesota gutter projects.',
   alternates: { canonical: '/why-us' },
 };
 
-const stats = [
-  { value: `${site.trust.yearsInBusiness}`, label: 'Years in business' },
-  { value: site.trust.jobsCompleted, label: 'Homes protected' },
-  { value: `${site.trust.warrantyYears}-yr`, label: 'Workmanship warranty' },
-  { value: `${site.trust.rating}★`, label: `${site.trust.reviewCount} reviews` },
+const highlights = [
+  { value: site.trust.experience, label: 'Local expertise' },
+  { value: site.trust.minnesotaHomes, label: 'Residential focus' },
+  { value: site.trust.warrantyShort, label: 'Workmanship coverage' },
+  { value: site.trust.customerFocus, label: 'Service standard' },
 ];
 
 export default function WhyUsPage() {
@@ -30,18 +30,17 @@ export default function WhyUsPage() {
       <PageHero
         eyebrow="The difference"
         title="A gutter company that actually sweats the details"
-        lead={`For ${site.trust.yearsInBusiness} years we’ve done it the same honest way — our own crews, transparent pricing, and a warranty we stand behind.`}
+        lead="We focus on honest pricing, trained crews, and gutter systems engineered to perform in Minnesota weather."
         crumbs={[{ label: 'Why Us' }]}
       />
 
-      {/* Stats band */}
       <Section tone="bone" size="sm">
         <Container>
           <RevealGroup className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map((s) => (
+            {highlights.map((s) => (
               <RevealItem key={s.label}>
                 <div className="text-center">
-                  <div className="font-display text-5xl font-semibold text-copper-600">
+                  <div className="font-display text-xl font-semibold text-copper-600 sm:text-2xl">
                     {s.value}
                   </div>
                   <div className="mt-2 text-sm uppercase tracking-wide text-graphite-500">

@@ -1,16 +1,15 @@
 import { Icon, type IconName } from '@/components/icons';
 import { Container } from '@/components/ui/Container';
-import { StarRating } from '@/components/ui/StarRating';
 import { site } from '@/lib/site';
 
 const credentials: { icon: IconName; value: string; label: string }[] = [
   { icon: 'shield', value: 'Licensed', label: '& Fully Insured' },
-  { icon: 'clock', value: `${site.trust.yearsInBusiness} Years`, label: 'In Business' },
-  { icon: 'home', value: site.trust.jobsCompleted, label: 'Homes Protected' },
+  { icon: 'clock', value: site.trust.experience, label: 'Local Expertise' },
+  { icon: 'home', value: site.trust.minnesotaHomes, label: 'Residential Focus' },
   {
     icon: 'checkCircle',
-    value: `${site.trust.warrantyYears}-Year`,
-    label: 'Workmanship Warranty',
+    value: site.trust.warrantyShort,
+    label: 'Workmanship Coverage',
   },
 ];
 
@@ -19,26 +18,16 @@ export function TrustBar() {
     <div className="border-b border-sand bg-bone">
       <Container className="py-6">
         <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
-          {/* Rating block */}
+          {/* Trust headline */}
           <div className="flex items-center gap-4">
-            <div className="text-center">
-              <div className="font-display text-3xl font-semibold leading-none text-graphite-900">
-                {site.trust.rating}
-              </div>
-              <StarRating
-                rating={site.trust.rating}
-                className="mt-1"
-                starClassName="h-3.5 w-3.5"
-              />
-            </div>
-            <div className="h-10 w-px bg-sand" />
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-limestone text-copper-600">
+              <Icon name="shield" className="h-5 w-5" />
+            </span>
             <div className="text-sm leading-tight">
               <div className="font-semibold text-graphite-900">
-                Excellent on Google
+                {site.trust.workmanship}
               </div>
-              <div className="text-graphite-500">
-                Based on {site.trust.reviewCount}+ verified reviews
-              </div>
+              <div className="text-graphite-500">{site.trust.localService}</div>
             </div>
           </div>
 

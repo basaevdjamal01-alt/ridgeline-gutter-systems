@@ -10,9 +10,9 @@ import { Icon, type IconName } from '@/components/icons';
 import { RevealGroup, RevealItem } from '@/components/motion/Reveal';
 
 export const metadata: Metadata = {
-  title: 'Gutter Services',
+  title: 'Gutter Services in Minnesota',
   description:
-    'Custom 5" and 6" seamless K-Style gutters, professional installation, gutter guards, cleaning, and repairs — all handled by our own trained crews across Minnesota.',
+    'Seamless K-style gutters, installation, gutter guards, cleaning, and repairs across Minnesota. Custom 5" and 6" aluminum systems formed on-site by trained crews.',
   alternates: { canonical: '/services' },
 };
 

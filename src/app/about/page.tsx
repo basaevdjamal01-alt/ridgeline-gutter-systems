@@ -9,8 +9,9 @@ import { Reveal } from '@/components/motion/Reveal';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: `Locally owned for ${site.trust.yearsInBusiness} years, ${site.name} protects homes across the region with craftsmanship-first gutter work.`,
+  title: 'About Ridgeline Gutter Systems',
+  description:
+    'Locally focused Minnesota gutter company specializing in seamless K-style gutters, guards, cleaning, and repairs with trained crews and honest pricing.',
   alternates: { canonical: '/about' },
 };
 
@@ -18,7 +19,7 @@ const values = [
   {
     icon: 'users' as const,
     title: 'People first',
-    body: 'Our crews are employees we train and trust — and we treat every property like it’s our own.',
+    body: 'Our crews are trained to do careful, respectful work — and we treat every property like it’s our own.',
   },
   {
     icon: 'clipboard' as const,
@@ -28,7 +29,7 @@ const values = [
   {
     icon: 'shield' as const,
     title: 'Built to last',
-    body: 'We use quality materials and proven methods so your system performs for decades, not seasons.',
+    body: 'We use quality materials and proven methods so your system performs in Minnesota weather.',
   },
 ];
 
@@ -38,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Local craftsmen protecting local homes"
-        lead={`What started as a single truck and a forming machine has grown into one of the region’s most trusted gutter companies — without ever losing the craftsmanship that built it.`}
+        lead="Ridgeline is a Minnesota-focused gutter company built on careful installation, clear communication, and systems engineered to move water where it should go."
         crumbs={[{ label: 'About' }]}
       />
 
@@ -47,14 +48,14 @@ export default function AboutPage() {
           <Reveal>
             <div className="space-y-5 text-body-lg text-graphite-700">
               <p>
-                For more than {site.trust.yearsInBusiness} years, {site.name} has
-                helped homeowners across {site.region.label} solve the same
-                quiet, expensive problem: water going where it shouldn’t.
+                {site.name} helps homeowners across {site.region.label} solve
+                the same quiet, expensive problem: water going where it
+                shouldn&rsquo;t.
               </p>
               <p>
-                We’re not a national franchise or a lead-generation brand. We’re
-                a local team of installers who form seamless gutters right at
-                your home, stand behind our work with a real warranty, and
+                We&rsquo;re not a national franchise or a lead-generation brand.
+                We&rsquo;re a local team that forms seamless gutters at your
+                home, stands behind our work with a written warranty, and
                 answer the phone when you call.
               </p>
               <p>

@@ -9,7 +9,7 @@ export const site = {
   legalName: 'Ridgeline Gutter Systems LLC',
   tagline: 'Seamless gutters that protect your biggest investment.',
   description:
-    'Premium gutter installation, seamless gutters, leaf-guard protection, and professional gutter cleaning. Licensed, insured, and built to protect your home for decades.',
+    'Professional seamless gutter installation, gutter guards, cleaning, and repairs across Minnesota. Licensed, insured, and focused on quality workmanship.',
   url: 'https://www.example.com',
   // Default OG/twitter image (place a real file in /public)
   ogImage: '/og.jpg',
@@ -36,12 +36,17 @@ export const site = {
     primaryState: 'Minnesota',
   },
 
+  /** Honest, verifiable trust language — no fabricated ratings or counts. */
   trust: {
-    rating: 4.9,
-    reviewCount: 487,
-    yearsInBusiness: 18,
-    warrantyYears: 25,
-    jobsCompleted: '6,500+',
+    localService: 'Trusted local gutter service',
+    customerFocus: 'Customer-focused service',
+    workmanship: 'Quality-focused workmanship',
+    experience: 'Experienced local crews',
+    minnesotaHomes: 'Built for Minnesota homes',
+    warranty: 'Written Workmanship Warranty',
+    warrantyShort: 'Written Warranty',
+    licensedInsured: 'Licensed & Insured',
+    trainedCrews: 'Trained installation crews',
   },
 
   social: {

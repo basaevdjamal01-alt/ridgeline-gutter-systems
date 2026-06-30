@@ -2,16 +2,17 @@ import type { Metadata } from 'next';
 import { PageHero } from '@/components/sections/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-import { StarRating } from '@/components/ui/StarRating';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 import { CtaBand } from '@/components/sections/CtaBand';
 import { Icon } from '@/components/icons';
 import { RevealGroup, RevealItem } from '@/components/motion/Reveal';
-import { testimonials } from '@/content';
+import { customerExpectations } from '@/content';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Reviews',
-  description: `Read why ${site.region.label} homeowners rate us ${site.trust.rating} stars across ${site.trust.reviewCount} reviews.`,
+  title: 'What Homeowners Can Expect',
+  description:
+    'Learn what to expect from Ridgeline Gutter Systems — clear estimates, respectful crews, photo-documented work, and professional gutter service across Minnesota.',
   alternates: { canonical: '/reviews' },
 };
 
@@ -19,48 +20,41 @@ export default function ReviewsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Reviews"
-        title="Trusted by thousands of homeowners"
+        eyebrow="What to expect"
+        title="What homeowners can expect from Ridgeline"
+        lead="We focus on honest communication, quality installation, and a professional experience from your first estimate through project completion."
         crumbs={[{ label: 'Reviews' }]}
-      >
-        <div className="flex items-center gap-4 rounded-full border border-bone/10 bg-bone/[0.06] px-6 py-3 backdrop-blur-sm">
-          <span className="font-display text-3xl font-semibold text-bone">
-            {site.trust.rating}
-          </span>
-          <div>
-            <StarRating rating={site.trust.rating} />
-            <p className="text-sm text-bone/60">
-              {site.trust.reviewCount} verified reviews
-            </p>
-          </div>
-        </div>
-      </PageHero>
+      />
 
       <Section tone="bone">
         <Container>
-          <RevealGroup className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <RevealItem key={`${t.name}-${i}`} className="break-inside-avoid">
-                <figure className="rounded-2xl border border-sand bg-bone p-7 shadow-soft">
-                  <div className="flex items-center justify-between">
-                    <StarRating rating={t.rating} />
-                    <Icon name="quote" className="h-6 w-6 text-copper-300" />
-                  </div>
-                  <blockquote className="mt-4 text-graphite-700">
-                    {t.quote}
-                  </blockquote>
-                  <figcaption className="mt-6 border-t border-sand pt-4">
-                    <div className="font-semibold text-graphite-900">
-                      {t.name}
-                    </div>
-                    <div className="text-sm text-graphite-500">
-                      {t.location} · {t.service}
-                    </div>
-                  </figcaption>
-                </figure>
+          <SectionHeading
+            align="center"
+            className="items-center"
+            eyebrow="Our standard"
+            title="Professional service you can count on"
+            lead="These are the standards we hold ourselves to on every Minnesota gutter project — not fabricated customer reviews."
+          />
+
+          <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {customerExpectations.map((item) => (
+              <RevealItem key={item.title} className="h-full">
+                <div className="flex h-full flex-col rounded-2xl border border-sand bg-bone p-7 shadow-soft">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-copper-gradient text-bone shadow-copper">
+                    <Icon name={item.icon} className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 text-h3">{item.title}</h3>
+                  <p className="mt-3 text-graphite-600">{item.body}</p>
+                </div>
               </RevealItem>
             ))}
           </RevealGroup>
+
+          <p className="mx-auto mt-12 max-w-2xl text-center text-sm text-graphite-500">
+            When real Google reviews are available, we&rsquo;ll share them here.
+            Until then, we&rsquo;d rather be upfront about what we deliver than
+            publish placeholder testimonials.
+          </p>
         </Container>
       </Section>
 
