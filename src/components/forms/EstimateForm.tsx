@@ -9,6 +9,17 @@ import { cn, telHref } from '@/lib/utils';
 
 type Status = 'idle' | 'submitting' | 'success';
 
+type EstimateFormState = {
+  name: string;
+  phone: string;
+  email: string;
+  city: string;
+  service: string;
+  propertyType: string;
+  details: string;
+  contactMethod: string;
+};
+
 const propertyTypes = [
   'Single-family home',
   'Townhouse',
@@ -21,19 +32,21 @@ const contactMethods = ['Phone', 'Email', 'Text', 'Either is fine'];
 
 export function EstimateForm() {
   const [status, setStatus] = useState<Status>('idle');
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<EstimateFormState>({
     name: '',
     phone: '',
     email: '',
     city: '',
     service: '',
-    propertyType: propertyTypes[0],
+    propertyType: '',
     details: '',
-    contactMethod: contactMethods[0],
+    contactMethod: contactMethods[0] ?? 'Phone',
   });
 
-  const update = (key: keyof typeof form, value: string) =>
-    setForm((f) => ({ ...f, [key]: value }));
+  const update = <K extends keyof EstimateFormState>(
+    key: K,
+    value: EstimateFormState[K],
+  ) => setForm((f) => ({ ...f, [key]: value }));
 
   function buildMailtoBody() {
     return [
