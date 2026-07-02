@@ -5,9 +5,9 @@ import { Icon } from '@/components/icons';
 import { Button } from '@/components/ui/Button';
 import { services } from '@/content';
 import { site } from '@/lib/site';
-import { cn, telHref } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
-type Status = 'idle' | 'submitting' | 'success';
+type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 type EstimateFormState = {
   name: string;
@@ -38,7 +38,7 @@ export function EstimateForm() {
     email: '',
     city: '',
     service: '',
-    propertyType: '',
+    propertyType: propertyTypes[0] ?? '',
     details: '',
     contactMethod: contactMethods[0] ?? 'Phone',
   });
@@ -46,46 +46,45 @@ export function EstimateForm() {
   const update = <K extends keyof EstimateFormState>(
     key: K,
     value: EstimateFormState[K],
-  ) => setForm((f) => ({ ...f, [key]: value }));
-
-  function buildMailtoBody() {
-    return [
-      'Free Estimate Request',
-      '',
-      `Name: ${form.name}`,
-      `Phone: ${form.phone}`,
-      `Email: ${form.email}`,
-      `City: ${form.city}`,
-      `Service needed: ${form.service}`,
-      `Property type: ${form.propertyType}`,
-      `Preferred contact: ${form.contactMethod}`,
-      '',
-      'Project details:',
-      form.details || '(none provided)',
-    ].join('\n');
-  }
+  ) => {
+    setForm((f) => ({ ...f, [key]: value }));
+    // Clear a previous error as soon as the user edits the form again.
+    setStatus((s) => (s === 'error' ? 'idle' : s));
+  };
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus('submitting');
 
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/telegram', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
+      const data = (await res.json().catch(() => null)) as
+        | { success?: boolean }
+        | null;
+
+      if (res.ok && data?.success) {
+        // Only clear the form after a confirmed successful submission.
+        setForm({
+          name: '',
+          phone: '',
+          email: '',
+          city: '',
+          service: '',
+          propertyType: propertyTypes[0] ?? '',
+          details: '',
+          contactMethod: contactMethods[0] ?? 'Phone',
+        });
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
     } catch {
-      // Backend logging is optional; mailto is the primary handoff for now.
+      setStatus('error');
     }
-
-    const subject = encodeURIComponent(
-      `Free Estimate Request — ${form.name}`,
-    );
-    const body = encodeURIComponent(buildMailtoBody());
-    window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
-
-    setStatus('success');
   }
 
   if (status === 'success') {
@@ -94,24 +93,10 @@ export function EstimateForm() {
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-patina-500/15 text-patina-500">
           <Icon name="checkCircle" className="h-9 w-9" />
         </span>
-        <h3 className="mt-6 text-h3">Estimate request ready to send</h3>
+        <h3 className="mt-6 text-h3">Request sent</h3>
         <p className="mt-3 max-w-md text-graphite-600">
-          Your email app should open with your details pre-filled. If it
-          doesn&rsquo;t, call us at{' '}
-          <a
-            href={telHref(site.contact.phoneRaw)}
-            className="font-semibold text-copper-600 hover:underline"
-          >
-            {site.contact.phone}
-          </a>{' '}
-          or email{' '}
-          <a
-            href={`mailto:${site.contact.email}`}
-            className="font-semibold text-copper-600 hover:underline"
-          >
-            {site.contact.email}
-          </a>{' '}
-          and we&rsquo;ll respond within one business day.
+          Your request has been sent successfully. We&rsquo;ll contact you
+          shortly.
         </p>
       </div>
     );
@@ -199,6 +184,15 @@ export function EstimateForm() {
         />
       </div>
 
+      {status === 'error' && (
+        <p
+          role="alert"
+          className="mt-6 rounded-xl border border-danger/30 bg-danger/5 px-4 py-3 text-sm font-medium text-danger"
+        >
+          Something went wrong. Please call us directly at {site.contact.phone}.
+        </p>
+      )}
+
       <div className="mt-8">
         <Button
           type="submit"
@@ -214,7 +208,7 @@ export function EstimateForm() {
             form.service === 'Select a service…'
           }
         >
-          {status === 'submitting' ? 'Preparing request…' : 'Request Free Estimate'}
+          {status === 'submitting' ? 'Sending…' : 'Request Free Estimate'}
         </Button>
       </div>
     </form>
