@@ -173,7 +173,14 @@
   }
 }
 
-/* ---------- Brandmark — ridgeline-logo.png (blend + crop, no box) ---------- */
+/* ============================================================
+   Brandmark — approved GUTTER FLOW MASTER LLC logo (image)
+   The source PNG (/images/gfm-logo.png) has a solid black
+   background, so on the dark bars it is composited with
+   `mix-blend-mode: screen`: black reads as the bar color behind
+   it (seamless) while the gold/white artwork shows true.
+   The file is used as-is — never cropped, redrawn, or recolored.
+   ============================================================ */
 .brand-logo {
   position: relative;
   display: inline-flex;
@@ -186,24 +193,18 @@
 
 .brand-logo__img {
   display: block;
-  height: auto;
   width: auto;
   object-fit: contain;
-}
-
-/* Footer — transparent PNG, proportional, subtle shadow */
-footer .brand-logo--footer .brand-logo__img {
-  height: 46px;
-  width: auto;
-  max-width: 210px;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  mix-blend-mode: screen;
 }
 
 /* ============================================================
-   Header logo — simplified lockup:
-   gold R / roof icon (cropped from the transparent PNG) on the left,
-   then "RIDGELINE" + "GUTTER SYSTEMS" as crisp HTML text.
-   No full wordmark image, no box, no blur.
+   Header logo — the approved PNG has ~40% empty black padding baked
+   in above and below the artwork, which made it look tiny. We trim
+   ONLY that dead margin with object-fit: cover (a uniform scale —
+   nothing is stretched and no part of the logo is cut) so the mark
+   displays large and anchors the header. The visible box is sized
+   responsively so the fixed-width nav never wraps.
    ============================================================ */
 header .header-logo-link {
   background: transparent;
@@ -212,127 +213,73 @@ header .header-logo-link {
 }
 
 header .brand-logo--header {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  /* mobile / default — box == the artwork (dead padding cropped out) */
+  height: 23px;
+  width: 191px;
+}
+
+header .brand-logo--header .brand-logo__img {
+  position: absolute;
+  top: -57px;
+  left: -11px;
+  width: 213px;
+  height: auto;
+  max-width: none;
+  object-fit: fill; /* no fitting needed — natural aspect at fixed width */
+}
+
+/* Small phones — keep the lockup within the viewport */
+@media (max-width: 379px) {
+  header .brand-logo--header {
+    height: 17px;
+    width: 142px;
+  }
+  header .brand-logo--header .brand-logo__img {
+    top: -42px;
+    left: -8px;
+    width: 157px;
+  }
+}
+
+/* Tablet & small desktop — compact so the fixed-width nav stays on one line */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header .brand-logo--header {
+    height: 17px;
+    width: 142px;
+  }
+  header .brand-logo--header .brand-logo__img {
+    top: -42px;
+    left: -8px;
+    width: 157px;
+  }
+}
+
+/* Large desktop — primary visual anchor, ~33px tall artwork (10% below approved 37px) */
+@media (min-width: 1280px) {
+  header .brand-logo--header {
+    height: 33px;
+    width: 275px;
+  }
+  header .brand-logo--header .brand-logo__img {
+    top: -81px;
+    left: -15px;
+    width: 305px;
+  }
+}
+
+/* ============================================================
+   Footer logo — slightly larger than the header version
+   ============================================================ */
+footer .brand-logo--footer {
   display: inline-flex;
   align-items: center;
-  gap: 10px; /* tighter icon ↔ wordmark */
-  height: 68px;
 }
 
-/*
-  Icon crop from ridgeline-logo.png (1536×1024, transparent).
-  Gold R + roof + downspout box: x 254→631, y 311→611 (≈377×300).
-  Desktop icon 76px wide (≈ +8%) → scale 0.20159:
-    background-size 310×206, offset -51 / -63.
-*/
-header .brand-logo--header .brand-logo__icon {
-  flex: none;
-  display: block;
-  width: 76px;
-  height: 60px;
-  background-image: url('/images/ridgeline-logo.png');
-  background-repeat: no-repeat;
-  background-size: 310px 206px;
-  background-position: -51px -63px;
-  /* soft shadow (not glow) for depth on the dark bar */
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.55));
-}
-
-header .brand-logo--header .brand-logo__wordmark {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1;
-}
-
-header .brand-logo--header .brand-logo__name {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  font-size: 37px; /* ≈ +8% */
-  line-height: 1;
-  letter-spacing: 0.005em;
-  white-space: nowrap;
-  /* soft shadow (not glow) */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* RIDGE — ivory / white */
-header .brand-logo--header .brand-logo__ridge {
-  color: #fbfaf7;
-}
-
-/* LINE — metallic copper-gold with a slow shine sweep (~13s).
-   Layer 1 = a moving light streak; layer 2 = the resting gold gradient.
-   Both are clipped to the text; the streak idles off-screen between sweeps. */
-header .brand-logo--header .brand-logo__line {
-  color: #d8a766;
-  background-image: linear-gradient(
-      100deg,
-      transparent 38%,
-      rgba(255, 246, 224, 0.9) 50%,
-      transparent 62%
-    ),
-    linear-gradient(180deg, #f0d29e 0%, #d8a766 48%, #b0703c 100%);
-  background-size: 300% 100%, 100% 100%;
-  background-position: 130% 0, 0 0;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: logo-gold-shine 13s ease-in-out infinite;
-}
-
-@keyframes logo-gold-shine {
-  0% {
-    background-position: 130% 0, 0 0;
-  }
-  9% {
-    background-position: -40% 0, 0 0;
-  }
-  100% {
-    background-position: -40% 0, 0 0;
-  }
-}
-
-/* GUTTER SYSTEMS — slightly larger (≈ +15%), readable copper, wide tracking */
-header .brand-logo--header .brand-logo__tag {
-  margin-top: 6px;
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 13px; /* ≈ +15% */
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #dba876;
-  white-space: nowrap;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  header .brand-logo--header .brand-logo__line {
-    animation: none;
-  }
-}
-
-/* Mobile — slightly larger than before (+8%), tagline hidden */
-@media (max-width: 1023px) {
-  header .brand-logo--header {
-    gap: 9px;
-    height: 58px;
-  }
-
-  header .brand-logo--header .brand-logo__icon {
-    width: 52px;
-    height: 41px;
-    background-size: 212px 141px;
-    background-position: -35px -43px;
-  }
-
-  header .brand-logo--header .brand-logo__name {
-    font-size: 26px;
-  }
-
-  header .brand-logo--header .brand-logo__tag {
-    display: none;
-  }
+footer .brand-logo--footer .brand-logo__img {
+  height: 100px;
 }
 
 /* ============================================================

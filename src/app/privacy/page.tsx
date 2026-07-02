@@ -26,7 +26,7 @@ export default function PrivacyPage() {
               Last updated: {new Date().getFullYear()}
             </p>
             <p>
-              {site.legalName} (&ldquo;Ridgeline,&rdquo; &ldquo;we,&rdquo;
+              {site.legalName} (&ldquo;GUTTER FLOW MASTER,&rdquo; &ldquo;we,&rdquo;
               &ldquo;us&rdquo;) respects your privacy. This policy explains how
               we handle information when you visit our website or request gutter
               services in Minnesota.

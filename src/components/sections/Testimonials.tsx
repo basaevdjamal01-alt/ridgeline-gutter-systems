@@ -12,7 +12,7 @@ export function Testimonials() {
         <SectionHeading
           align="center"
           eyebrow="What to expect"
-          title="What homeowners can expect from Ridgeline"
+          title="What homeowners can expect from GUTTER FLOW MASTER"
           lead="Every visit is focused on clear communication, respectful work, and a gutter system that performs in Minnesota weather."
         />
 

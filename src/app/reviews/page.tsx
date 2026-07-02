@@ -12,7 +12,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'What Homeowners Can Expect',
   description:
-    'Learn what to expect from Ridgeline Gutter Systems — clear estimates, respectful crews, photo-documented work, and professional gutter service across Minnesota.',
+    'Learn what to expect from GUTTER FLOW MASTER — clear estimates, respectful crews, photo-documented work, and professional gutter service across Minnesota.',
   alternates: { canonical: '/reviews' },
 };
 
@@ -21,7 +21,7 @@ export default function ReviewsPage() {
     <>
       <PageHero
         eyebrow="What to expect"
-        title="What homeowners can expect from Ridgeline"
+        title="What homeowners can expect from GUTTER FLOW MASTER"
         lead="We focus on honest communication, quality installation, and a professional experience from your first estimate through project completion."
         crumbs={[{ label: 'Reviews' }]}
       />

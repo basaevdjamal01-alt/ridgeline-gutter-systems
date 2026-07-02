@@ -318,7 +318,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      'Foundation guy told me my gutters were dumping water at the corner of the house. Ridgeline re-sloped and added extensions — basement’s been bone dry since.',
+      'Foundation guy told me my gutters were dumping water at the corner of the house. GUTTER FLOW MASTER re-sloped and added extensions — basement’s been bone dry since.',
     name: 'Allison W.',
     location: 'Bloomington',
     rating: 5,

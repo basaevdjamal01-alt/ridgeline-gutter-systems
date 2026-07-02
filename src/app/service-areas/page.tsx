@@ -12,7 +12,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Minnesota Gutter Service Areas',
   description:
-    'Ridgeline Gutter Systems serves homeowners across Minnesota with seamless gutter installation, guards, cleaning, and repairs. Call to confirm coverage in your city.',
+    'GUTTER FLOW MASTER serves homeowners across Minnesota with seamless gutter installation, guards, cleaning, and repairs. Call to confirm coverage in your city.',
   alternates: { canonical: '/service-areas' },
 };
 

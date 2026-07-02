@@ -1,4 +1,4 @@
-# Ridgeline Gutter Systems — Premium Gutter Website Template
+# GUTTER FLOW MASTER LLC — Premium Gutter Website Template
 
 A production-ready, **reusable** marketing website template for gutter
 installation & cleaning companies. Built to look like a custom agency build,

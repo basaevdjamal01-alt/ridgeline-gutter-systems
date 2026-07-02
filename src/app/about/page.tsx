@@ -9,7 +9,7 @@ import { Reveal } from '@/components/motion/Reveal';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'About Ridgeline Gutter Systems',
+  title: 'About GUTTER FLOW MASTER',
   description:
     'Locally focused Minnesota gutter company specializing in seamless K-style gutters, guards, cleaning, and repairs with trained crews and honest pricing.',
   alternates: { canonical: '/about' },
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Local craftsmen protecting local homes"
-        lead="Ridgeline is a Minnesota-focused gutter company built on careful installation, clear communication, and systems engineered to move water where it should go."
+        lead="GUTTER FLOW MASTER is a Minnesota-focused gutter company built on careful installation, clear communication, and systems engineered to move water where it should go."
         crumbs={[{ label: 'About' }]}
       />
 

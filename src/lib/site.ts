@@ -5,8 +5,8 @@
  */
 
 export const site = {
-  name: 'Ridgeline Gutter Systems',
-  legalName: 'Ridgeline Gutter Systems LLC',
+  name: 'GUTTER FLOW MASTER',
+  legalName: 'GUTTER FLOW MASTER LLC',
   tagline: 'Seamless gutters that protect your biggest investment.',
   description:
     'Professional seamless gutter installation, gutter guards, cleaning, and repairs across Minnesota. Licensed, insured, and focused on quality workmanship.',

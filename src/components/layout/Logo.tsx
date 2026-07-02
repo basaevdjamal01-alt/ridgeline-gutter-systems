@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { site } from '@/lib/site';
 
-const LOGO_SRC = '/images/ridgeline-logo.png';
+const LOGO_SRC = '/images/gfm-logo.png';
 
 type LogoProps = {
   className?: string;
@@ -10,43 +10,35 @@ type LogoProps = {
 };
 
 /**
- * Header: a simplified, readable lockup — the gold R / roof icon cropped from
- * the transparent ridgeline-logo.png, paired with crisp HTML text for
- * "RIDGELINE" (ivory + copper-gold) and a "GUTTER SYSTEMS" tagline.
- * Footer: the full PNG via next/image at a small size.
+ * Approved GUTTER FLOW MASTER LLC logo, used as-is (never edited).
+ * The source PNG has a solid black background; on the dark header and
+ * footer bars it is composited with `mix-blend-mode: screen` (see
+ * globals.css) so the black drops out and only the artwork shows.
  */
 export function Logo({ className, variant = 'default' }: LogoProps) {
-  if (variant === 'header') {
-    return (
-      <span
-        className={cn('brand-logo brand-logo--header', className)}
-        role="img"
-        aria-label={`${site.name} logo`}
-      >
-        <span className="brand-logo__icon" aria-hidden="true" />
-        <span className="brand-logo__wordmark">
-          <span className="brand-logo__name">
-            <span className="brand-logo__ridge">RIDGE</span>
-            <span className="brand-logo__line">LINE</span>
-          </span>
-          <span className="brand-logo__tag">Gutter Systems</span>
-        </span>
-      </span>
-    );
-  }
+  const isHeader = variant === 'header';
 
   return (
     <span
-      className={cn('brand-logo brand-logo--footer', className)}
-      aria-label={`${site.name} logo`}
+      className={cn(
+        'brand-logo',
+        isHeader ? 'brand-logo--header' : 'brand-logo--footer',
+        className,
+      )}
     >
       <Image
         src={LOGO_SRC}
-        alt=""
-        width={1069}
-        height={301}
+        alt={`${site.name} logo`}
+        width={1536}
+        height={1024}
+        priority={isHeader}
+        quality={90}
+        sizes={
+          isHeader
+            ? '(min-width: 1280px) 444px, (min-width: 1024px) 231px, 296px'
+            : '160px'
+        }
         className="brand-logo__img"
-        priority
       />
     </span>
   );

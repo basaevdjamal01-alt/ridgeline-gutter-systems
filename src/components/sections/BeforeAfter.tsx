@@ -48,7 +48,7 @@ export function BeforeAfter() {
         <div className="mt-12 overflow-hidden rounded-2xl border border-sand shadow-lift">
           <div
             ref={ref}
-            className="relative aspect-[16/9] w-full cursor-ew-resize select-none touch-none"
+            className="relative aspect-[160/63] w-full cursor-ew-resize select-none touch-none"
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}

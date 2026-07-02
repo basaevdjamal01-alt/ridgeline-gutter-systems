@@ -11,7 +11,7 @@ import { differentiators } from '@/content';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Why Choose Ridgeline',
+  title: 'Why Choose GUTTER FLOW MASTER',
   description:
     'Trained installation crews, on-site seamless forming, upfront written pricing, and a clear written workmanship warranty for Minnesota gutter projects.',
   alternates: { canonical: '/why-us' },

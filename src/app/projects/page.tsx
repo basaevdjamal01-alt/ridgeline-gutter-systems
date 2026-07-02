@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Example Gutter Projects',
   description:
-    'Example gutter project types Ridgeline handles across Minnesota — seamless installation, guards, cleaning, and drainage corrections.',
+    'Example gutter project types GUTTER FLOW MASTER handles across Minnesota — seamless installation, guards, cleaning, and drainage corrections.',
   alternates: { canonical: '/projects' },
 };
 
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Example project types"
         title="The kinds of gutter work we handle"
-        lead="These examples show the types of gutter projects Ridgeline can handle. Replace with real project photos after launch."
+        lead="These examples show the types of gutter projects GUTTER FLOW MASTER can handle. Replace with real project photos after launch."
         crumbs={[{ label: 'Projects' }]}
       />
 

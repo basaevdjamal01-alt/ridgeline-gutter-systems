@@ -187,7 +187,7 @@ export default function ServicesPage() {
         </Container>
       </Section>
 
-      {/* 3. Why homeowners choose Ridgeline */}
+      {/* 3. Why homeowners choose GUTTER FLOW MASTER */}
       <WhyUs />
 
       {/* 4. CTA section */}

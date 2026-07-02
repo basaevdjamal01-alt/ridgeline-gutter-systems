@@ -50,8 +50,8 @@ export function WhyChooseRidgeline() {
       <Container>
         <SectionHeading
           align="center"
-          eyebrow="Why Ridgeline"
-          title="Why Minnesota Homeowners Choose Ridgeline"
+          eyebrow="Why GUTTER FLOW MASTER"
+          title="Why Minnesota Homeowners Choose GUTTER FLOW MASTER"
           lead="Professional seamless gutter systems installed with craftsmanship, honest pricing, and dependable service throughout Minnesota."
         />
 

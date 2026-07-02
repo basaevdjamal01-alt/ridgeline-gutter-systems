@@ -72,17 +72,17 @@ export function Header() {
 
       {/* Main bar — premium dark navbar with a subtle vertical gradient */}
       <div className="border-b border-white/[0.05] bg-[linear-gradient(180deg,#0b0d10_0%,#13171c_100%)] text-bone shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-        <div className="mx-auto flex h-[76px] max-w-content items-center justify-between gap-6 px-6 lg:h-[92px] lg:px-8">
+        <div className="mx-auto flex h-[84px] max-w-content items-center justify-between gap-6 px-6 lg:h-[112px] lg:px-8">
           <Link
             href="/"
             aria-label={`${site.name} home`}
-            className="header-logo-link flex shrink-0 items-center py-0 pl-1 pr-4 lg:pl-2 lg:pr-6"
+            className="header-logo-link flex shrink-0 items-center py-0 pl-1 pr-2 lg:pl-3 lg:pr-2 xl:pl-6 xl:pr-2"
           >
             <Logo variant="header" />
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-2 lg:ml-6 lg:flex" aria-label="Primary">
             {mainNav.map((item) => {
               const active = isActive(item.href);
               return (

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  icons: {
+    icon: '/images/gfm-logo.png',
+    shortcut: '/images/gfm-logo.png',
+    apple: '/images/gfm-logo.png',
+  },
   keywords: [
     'Minnesota Seamless Gutters',
     'Gutter Installation Minnesota',
