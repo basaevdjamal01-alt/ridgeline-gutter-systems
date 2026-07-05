@@ -30,6 +30,12 @@ const propertyTypes = [
 
 const contactMethods = ['Phone', 'Email', 'Text', 'Either is fine'];
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function EstimateForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [form, setForm] = useState<EstimateFormState>({
@@ -67,6 +73,15 @@ export function EstimateForm() {
         | null;
 
       if (res.ok && data?.success) {
+        // Fire the Google Ads conversion ONLY after Telegram confirms success.
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-18299727437/-1GFCNzH-socEM3c_pVE',
+            value: 1.0,
+            currency: 'USD',
+          });
+        }
+
         // Only clear the form after a confirmed successful submission.
         setForm({
           name: '',
