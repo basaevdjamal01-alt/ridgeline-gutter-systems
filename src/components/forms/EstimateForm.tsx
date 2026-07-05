@@ -33,6 +33,7 @@ const contactMethods = ['Phone', 'Email', 'Text', 'Either is fine'];
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -80,6 +81,11 @@ export function EstimateForm() {
             value: 1.0,
             currency: 'USD',
           });
+        }
+
+        // Fire the Meta Pixel Lead event ONLY after Telegram confirms success.
+        if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead');
         }
 
         // Only clear the form after a confirmed successful submission.
