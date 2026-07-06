@@ -97,7 +97,7 @@ export function EstimateForm() {
           window.ttq &&
           typeof window.ttq.track === 'function'
         ) {
-          window.ttq.track('SubmitForm');
+          window.ttq.track('Lead');
         }
 
         // Only clear the form after a confirmed successful submission.
