@@ -34,6 +34,9 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     fbq?: (...args: unknown[]) => void;
+    ttq?: {
+      track?: (...args: unknown[]) => void;
+    };
   }
 }
 
@@ -86,6 +89,15 @@ export function EstimateForm() {
         // Fire the Meta Pixel Lead event ONLY after Telegram confirms success.
         if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
           window.fbq('track', 'Lead');
+        }
+
+        // Fire the TikTok Pixel SubmitForm event ONLY after Telegram confirms success.
+        if (
+          typeof window !== 'undefined' &&
+          window.ttq &&
+          typeof window.ttq.track === 'function'
+        ) {
+          window.ttq.track('SubmitForm');
         }
 
         // Only clear the form after a confirmed successful submission.
