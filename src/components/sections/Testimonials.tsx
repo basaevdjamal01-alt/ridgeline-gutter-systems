@@ -13,7 +13,7 @@ export function Testimonials() {
           align="center"
           eyebrow="What to expect"
           title="What homeowners can expect from GUTTER FLOW MASTER"
-          lead="Every visit is focused on clear communication, respectful work, and a gutter system that performs in Minnesota weather."
+          lead="Every visit is focused on clear communication, respectful work, and a gutter system that performs in Upper Midwest weather across Minnesota, Wisconsin, and North Dakota."
         />
 
         <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

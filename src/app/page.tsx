@@ -14,9 +14,9 @@ import { CtaBand } from '@/components/sections/CtaBand';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: `${site.name} — Seamless Gutters in Minnesota`,
+  title: `${site.name} — Seamless Gutters in Minnesota, Wisconsin & North Dakota`,
   description:
-    'Minnesota seamless gutter installation, gutter guards, cleaning, and repairs. Custom 5" and 6" K-style systems formed on-site. Request a free estimate.',
+    'Seamless gutter installation, gutter guards, cleaning, and repairs across Minnesota, Wisconsin, and North Dakota. Custom 5" and 6" K-style systems formed on-site. Request a free estimate.',
   alternates: { canonical: '/' },
 };
 

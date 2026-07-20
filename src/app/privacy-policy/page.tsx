@@ -106,7 +106,8 @@ export default function PrivacyPolicyPage() {
                 protecting the personal information you share with us. This
                 Privacy Policy explains what information we collect, how we use
                 it, and the choices you have when you visit our website or
-                request our gutter services in Minnesota.
+                request our gutter services in Minnesota, Wisconsin, and North
+                Dakota.
               </p>
 
               <div className="mt-10 space-y-10">

@@ -10,9 +10,9 @@ import { Icon, type IconName } from '@/components/icons';
 import { RevealGroup, RevealItem } from '@/components/motion/Reveal';
 
 export const metadata: Metadata = {
-  title: 'Gutter Services in Minnesota',
+  title: 'Gutter Services in Minnesota, Wisconsin & North Dakota',
   description:
-    'Seamless K-style gutters, installation, gutter guards, cleaning, and repairs across Minnesota. Custom 5" and 6" aluminum systems formed on-site by trained crews.',
+    'Seamless K-style gutters, installation, gutter guards, cleaning, and repairs across Minnesota, Wisconsin, and North Dakota. Custom 5" and 6" aluminum systems formed on-site by trained crews.',
   alternates: { canonical: '/services' },
 };
 
@@ -111,7 +111,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="Premium gutter solutions built to last"
-        lead='We specialize in custom 5" and 6" seamless K-Style gutter systems, professional installation, gutter protection, cleaning and repairs throughout Minnesota.'
+        lead='We specialize in custom 5" and 6" seamless K-Style gutter systems, professional installation, gutter protection, cleaning and repairs throughout Minnesota, Wisconsin, and North Dakota.'
         crumbs={[{ label: 'Services' }]}
       />
 

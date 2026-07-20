@@ -10,7 +10,7 @@ import { telHref } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Free Estimate & Contact',
   description:
-    'Request a free gutter estimate in Minnesota. Seamless gutters, guards, cleaning, and repairs — call (651) 382-6898 or send your project details online.',
+    'Request a free gutter estimate in Minnesota, Wisconsin, or North Dakota. Seamless gutters, guards, cleaning, and repairs — call (651) 382-6898 or send your project details online.',
   alternates: { canonical: '/contact' },
 };
 
@@ -52,9 +52,9 @@ export default function ContactPage() {
                     {site.contact.email}
                   </a>
                 </ContactRow>
-                <ContactRow icon="mapPin" label="Visit">
+                <ContactRow icon="mapPin" label="Service area">
                   <span className="text-graphite-700">
-                    {site.contact.addressLine}
+                    {site.region.statesText}
                   </span>
                 </ContactRow>
                 <ContactRow icon="clock" label="Hours">

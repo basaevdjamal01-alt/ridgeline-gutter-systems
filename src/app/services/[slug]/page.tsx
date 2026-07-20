@@ -26,8 +26,8 @@ export async function generateMetadata({
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.title} in Minnesota`,
-    description: `${service.excerpt} Serving Minnesota homeowners with professional ${service.shortTitle.toLowerCase()} service. Request a free estimate.`,
+    title: `${service.title} in Minnesota, Wisconsin & North Dakota`,
+    description: `${service.excerpt} Serving homeowners across Minnesota, Wisconsin, and North Dakota with professional ${service.shortTitle.toLowerCase()} service. Request a free estimate.`,
     alternates: { canonical: `/services/${service.slug}` },
   };
 }
@@ -163,7 +163,10 @@ export default async function ServiceDetailPage({
             serviceType: service.title,
             description: service.excerpt,
             provider: { '@type': 'HomeAndConstructionBusiness', name: site.legalName },
-            areaServed: site.region.label,
+            areaServed: site.region.states.map((state) => ({
+              '@type': 'State',
+              name: state,
+            })),
           }),
         }}
       />

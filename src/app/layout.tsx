@@ -35,7 +35,11 @@ export const metadata: Metadata = {
   },
   keywords: [
     'Minnesota Seamless Gutters',
+    'Wisconsin Seamless Gutters',
+    'North Dakota Seamless Gutters',
     'Gutter Installation Minnesota',
+    'Gutter Installation Wisconsin',
+    'Gutter Installation North Dakota',
     'Gutter Cleaning Minnesota',
     'Gutter Guards Minnesota',
     'gutter installation',
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
     'gutter guards',
     'gutter cleaning',
     'gutter repair',
-    site.region.primaryState,
+    ...site.region.states,
   ],
   authors: [{ name: site.name }],
   openGraph: {
@@ -84,7 +88,10 @@ const localBusinessSchema = {
     addressRegion: 'Minnesota',
     addressCountry: 'US',
   },
-  areaServed: site.region.label,
+  areaServed: site.region.states.map((state) => ({
+    '@type': 'State',
+    name: state,
+  })),
 };
 
 export default function RootLayout({

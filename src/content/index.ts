@@ -399,7 +399,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: 'Example: Seamless Copper Profile',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Seamless Copper',
     summary:
       'Example of a custom half-round copper gutter run formed on-site to match period-style architecture.',
@@ -409,7 +409,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Example: K-Style + Guards',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Installation + Guards',
     summary:
       'Example of a full K-style aluminum system with micro-mesh guards on a multi-plane roofline.',
@@ -419,7 +419,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Example: Drainage Correction',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Repairs & Drainage',
     summary:
       'Example of re-pitched runs and downspout routing to move water away from the foundation.',
@@ -429,7 +429,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Example: Seamless Aluminum Upgrade',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Seamless Gutters',
     summary:
       'Example of replacing sectional gutters with seamless aluminum and matched downspouts.',
@@ -439,7 +439,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Example: Guard Retrofit',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Gutter Guards',
     summary:
       'Example of a micro-mesh guard retrofit for homes with heavy leaf coverage.',
@@ -449,7 +449,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Example: Concealed Hanger Install',
-    location: 'Minnesota residential',
+    location: 'Upper Midwest residential',
     service: 'Seamless Gutters',
     summary:
       'Example of a tight-tolerance seamless install with concealed hangers on masonry or trim.',

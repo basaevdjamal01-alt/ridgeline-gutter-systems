@@ -135,7 +135,7 @@ export function ServicesGrid() {
           align="center"
           eyebrow="Our Services"
           title="Premium Gutter Solutions Built To Last"
-          lead='We specialize in custom 5" and 6" seamless K-Style gutter systems, professional installation, gutter protection, cleaning and repairs throughout Minnesota.'
+          lead='We specialize in custom 5" and 6" seamless K-Style gutter systems, professional installation, gutter protection, cleaning and repairs throughout Minnesota, Wisconsin, and North Dakota.'
         />
 
         <div className="mt-14 space-y-6">

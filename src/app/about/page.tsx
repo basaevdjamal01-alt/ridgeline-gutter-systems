@@ -11,7 +11,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'About GUTTER FLOW MASTER',
   description:
-    'Locally focused Minnesota gutter company specializing in seamless K-style gutters, guards, cleaning, and repairs with trained crews and honest pricing.',
+    'Locally focused gutter company serving Minnesota, Wisconsin, and North Dakota — specializing in seamless K-style gutters, guards, cleaning, and repairs with trained crews and honest pricing.',
   alternates: { canonical: '/about' },
 };
 
@@ -29,7 +29,7 @@ const values = [
   {
     icon: 'shield' as const,
     title: 'Built to last',
-    body: 'We use quality materials and proven methods so your system performs in Minnesota weather.',
+    body: 'We use quality materials and proven methods so your system performs in Upper Midwest weather.',
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Local craftsmen protecting local homes"
-        lead="GUTTER FLOW MASTER is a Minnesota-focused gutter company built on careful installation, clear communication, and systems engineered to move water where it should go."
+        lead="GUTTER FLOW MASTER is a regional gutter company serving Minnesota, Wisconsin, and North Dakota — built on careful installation, clear communication, and systems engineered to move water where it should go."
         crumbs={[{ label: 'About' }]}
       />
 

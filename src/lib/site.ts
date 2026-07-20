@@ -9,7 +9,7 @@ export const site = {
   legalName: 'GUTTER FLOW MASTER LLC',
   tagline: 'Seamless gutters that protect your biggest investment.',
   description:
-    'Professional seamless gutter installation, gutter guards, cleaning, and repairs across Minnesota. Licensed, insured, and focused on quality workmanship.',
+    'Professional seamless gutter installation, gutter guards, cleaning, and repairs across Minnesota, Wisconsin, and North Dakota. Licensed, insured, and focused on quality workmanship.',
   url: 'https://www.example.com',
   // Default OG/twitter image (place a real file in /public)
   ogImage: '/og.jpg',
@@ -18,7 +18,7 @@ export const site = {
     phone: '(651) 382-6898',
     phoneRaw: '+16513826898',
     email: 'gutter.usa.pro@gmail.com',
-    addressLine: 'Minnesota, USA',
+    addressLine: 'Serving Minnesota, Wisconsin & North Dakota',
     city: 'Minnesota',
     state: 'MN',
     zip: '',
@@ -32,8 +32,13 @@ export const site = {
 
   // Regional scope (multi-location SEO)
   region: {
-    label: 'Minnesota',
+    label: 'Minnesota, Wisconsin & North Dakota',
     primaryState: 'Minnesota',
+    states: ['Minnesota', 'Wisconsin', 'North Dakota'],
+    statesText: 'Minnesota, Wisconsin & North Dakota',
+    statesShort: 'MN · WI · ND',
+    serveSentence:
+      'We proudly serve homeowners across Minnesota, Wisconsin, and North Dakota.',
   },
 
   /** Honest, verifiable trust language — no fabricated ratings or counts. */
@@ -42,7 +47,7 @@ export const site = {
     customerFocus: 'Customer-focused service',
     workmanship: 'Quality-focused workmanship',
     experience: 'Experienced local crews',
-    minnesotaHomes: 'Built for Minnesota homes',
+    minnesotaHomes: 'Built for MN, WI & ND homes',
     warranty: 'Written Workmanship Warranty',
     warrantyShort: 'Written Warranty',
     licensedInsured: 'Licensed & Insured',

@@ -10,9 +10,9 @@ import { serviceAreas } from '@/content';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Minnesota Gutter Service Areas',
+  title: 'Gutter Service Areas — Minnesota, Wisconsin & North Dakota',
   description:
-    'GUTTER FLOW MASTER serves homeowners across Minnesota with seamless gutter installation, guards, cleaning, and repairs. Call to confirm coverage in your city.',
+    'GUTTER FLOW MASTER serves homeowners across Minnesota, Wisconsin, and North Dakota with seamless gutter installation, guards, cleaning, and repairs. Call to confirm coverage in your city.',
   alternates: { canonical: '/service-areas' },
 };
 
@@ -30,8 +30,8 @@ export default function ServiceAreasPage() {
         <Container>
           <SectionHeading
             eyebrow="Communities"
-            title={`Proudly local to ${site.contact.city}`}
-            lead="Real, established service across the surrounding region — not a faceless call center."
+            title={`Proudly serving communities across ${site.region.statesText}`}
+            lead="Real, established service across the Upper Midwest — not a faceless call center. Don’t see your town? Call us and we’ll confirm coverage in Minnesota, Wisconsin, or North Dakota."
           />
           <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {serviceAreas.map((area) => (

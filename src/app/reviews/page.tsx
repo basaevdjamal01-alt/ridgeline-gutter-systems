@@ -12,7 +12,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'What Homeowners Can Expect',
   description:
-    'Learn what to expect from GUTTER FLOW MASTER — clear estimates, respectful crews, photo-documented work, and professional gutter service across Minnesota.',
+    'Learn what to expect from GUTTER FLOW MASTER — clear estimates, respectful crews, photo-documented work, and professional gutter service across Minnesota, Wisconsin, and North Dakota.',
   alternates: { canonical: '/reviews' },
 };
 
@@ -33,7 +33,7 @@ export default function ReviewsPage() {
             className="items-center"
             eyebrow="Our standard"
             title="Professional service you can count on"
-            lead="These are the standards we hold ourselves to on every Minnesota gutter project — not fabricated customer reviews."
+            lead="These are the standards we hold ourselves to on every gutter project across Minnesota, Wisconsin, and North Dakota — not fabricated customer reviews."
           />
 
           <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

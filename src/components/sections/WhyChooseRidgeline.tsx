@@ -23,7 +23,8 @@ const features: Feature[] = [
   {
     icon: 'shield',
     title: 'Premium Materials',
-    description: 'High-quality aluminum systems built for Minnesota weather.',
+    description:
+      'High-quality aluminum systems built for Upper Midwest weather.',
   },
   {
     icon: 'users',
@@ -40,7 +41,7 @@ const features: Feature[] = [
 const badges = [
   'Fully Licensed',
   'Free Estimates',
-  'Minnesota Based',
+  'MN · WI · ND',
   'Fast Response',
 ];
 
@@ -51,8 +52,8 @@ export function WhyChooseRidgeline() {
         <SectionHeading
           align="center"
           eyebrow="Why GUTTER FLOW MASTER"
-          title="Why Minnesota Homeowners Choose GUTTER FLOW MASTER"
-          lead="Professional seamless gutter systems installed with craftsmanship, honest pricing, and dependable service throughout Minnesota."
+          title="Why Homeowners Choose GUTTER FLOW MASTER"
+          lead="Professional seamless gutter systems installed with craftsmanship, honest pricing, and dependable service throughout Minnesota, Wisconsin, and North Dakota."
         />
 
         {/* Feature cards */}

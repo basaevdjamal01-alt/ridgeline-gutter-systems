@@ -127,9 +127,9 @@ function ReviewCard({ review }: { review: Review }) {
         )}
         <div className="min-w-0 flex-1">
           <p className="truncate font-semibold text-bone">{review.name}</p>
-          <p className="mt-0.5 text-sm text-bone/60">
-            {review.city}, Minnesota
-          </p>
+          {review.city ? (
+            <p className="mt-0.5 text-sm text-bone/60">{review.city}</p>
+          ) : null}
           <p className="mt-1 text-xs font-medium uppercase tracking-wide text-copper-300/90">
             {review.service}
           </p>

@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: `Terms for using the ${site.name} website and requesting gutter services in Minnesota.`,
+  description: `Terms for using the ${site.name} website and requesting gutter services in Minnesota, Wisconsin, and North Dakota.`,
   alternates: { canonical: '/terms' },
   robots: { index: false },
 };
@@ -34,7 +34,8 @@ export default function TermsPage() {
             <h2 className="text-h3 text-graphite-900">Website use</h2>
             <p>
               This website is provided for general information about our gutter
-              services in Minnesota. You agree to use the site lawfully and not
+              services in Minnesota, Wisconsin, and North Dakota. You agree to
+              use the site lawfully and not
               to attempt to disrupt its operation or access systems without
               authorization.
             </p>

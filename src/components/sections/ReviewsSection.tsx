@@ -21,7 +21,7 @@ const LEAVE_GOOGLE_REVIEW_URL = 'https://g.page/r/CcPsn34tVv6TEBM/review';
 function mapGoogleReviewToCard(item: GoogleReviewItem): Review {
   return {
     name: item.authorName,
-    city: 'MN',
+    city: '',
     rating: Math.round(item.rating),
     review: item.text,
     service: '',
@@ -65,7 +65,8 @@ function ReviewsTrustPanel() {
           <DecorativeStars />
 
           <p className="mt-3 text-base font-medium leading-snug text-bone/90">
-            We&rsquo;re earning the trust of homeowners across Minnesota.
+            We&rsquo;re earning the trust of homeowners across Minnesota,
+            Wisconsin, and North Dakota.
           </p>
           <p className="mt-2 text-sm leading-relaxed text-bone/65">
             Real customer reviews will appear here as new projects are
@@ -251,7 +252,7 @@ export function ReviewsSection() {
 
           <Reveal delay={0.05}>
             <h2 className="mt-5 max-w-3xl font-display text-[clamp(2.375rem,1.35rem+2.4vw,2.625rem)] leading-[1.1] tracking-tight text-bone md:text-h1 lg:text-display">
-              Trusted by Minnesota Homeowners
+              Trusted by Homeowners Across the Upper Midwest
             </h2>
           </Reveal>
 

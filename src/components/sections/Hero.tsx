@@ -23,9 +23,9 @@ export function Hero() {
             <span className="hero-glass inline-flex items-center gap-2.5 rounded-full border py-1.5 pl-2 pr-4 text-xs font-medium text-bone/90">
               <span className="flex items-center gap-1.5 rounded-full bg-copper-gradient px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-wide text-bone">
                 <Icon name="mapPin" className="h-3.5 w-3.5" />
-                {site.contact.state}
+                {site.region.statesShort}
               </span>
-              Proudly Serving Minnesota
+              Proudly Serving {site.region.statesText}
             </span>
           </Reveal>
 
@@ -104,7 +104,7 @@ export function Hero() {
           </div>
           <div>
             <div className="font-display text-xl font-semibold leading-none text-bone">
-              Minnesota
+              {site.region.statesShort}
             </div>
             <div className="text-[0.7rem] text-bone/70">Local Service</div>
           </div>

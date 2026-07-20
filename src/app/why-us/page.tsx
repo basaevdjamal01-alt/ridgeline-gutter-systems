@@ -13,7 +13,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Why Choose GUTTER FLOW MASTER',
   description:
-    'Trained installation crews, on-site seamless forming, upfront written pricing, and a clear written workmanship warranty for Minnesota gutter projects.',
+    'Trained installation crews, on-site seamless forming, upfront written pricing, and a clear written workmanship warranty for gutter projects across Minnesota, Wisconsin, and North Dakota.',
   alternates: { canonical: '/why-us' },
 };
 
@@ -30,7 +30,7 @@ export default function WhyUsPage() {
       <PageHero
         eyebrow="The difference"
         title="A gutter company that actually sweats the details"
-        lead="We focus on honest pricing, trained crews, and gutter systems engineered to perform in Minnesota weather."
+        lead="We focus on honest pricing, trained crews, and gutter systems engineered to perform in Upper Midwest weather across Minnesota, Wisconsin, and North Dakota."
         crumbs={[{ label: 'Why Us' }]}
       />
 

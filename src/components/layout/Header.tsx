@@ -51,7 +51,7 @@ export function Header() {
             <span>{site.trust.localService}</span>
             <span className="mx-2 text-bone/25">|</span>
             <span className="text-bone/60">
-              Licensed &amp; Insured · {site.region.label}
+              Licensed &amp; Insured · {site.region.statesShort}
             </span>
           </div>
           <div className="flex items-center gap-5">

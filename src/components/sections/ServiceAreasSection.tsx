@@ -17,9 +17,20 @@ export function ServiceAreasSection() {
             <SectionHeading
               eyebrow="Service areas"
               tone="light"
-              title={`Proudly protecting homes across ${site.region.primaryState}`}
-              lead="Based in our home city and serving the surrounding communities with same-week scheduling."
+              title={`Proudly protecting homes across ${site.region.statesText}`}
+              lead="Based in Minnesota and serving communities across Wisconsin and North Dakota with reliable scheduling."
             />
+            <ul className="mt-7 flex flex-wrap gap-2.5">
+              {site.region.states.map((state) => (
+                <li
+                  key={state}
+                  className="inline-flex items-center gap-2 rounded-full border border-copper-400/30 bg-bone/[0.05] px-4 py-1.5 text-sm font-medium text-bone/90"
+                >
+                  <Icon name="mapPin" className="h-4 w-4 text-copper-400" />
+                  {state}
+                </li>
+              ))}
+            </ul>
             <div className="mt-8">
               <Button href="/service-areas">View all service areas</Button>
             </div>

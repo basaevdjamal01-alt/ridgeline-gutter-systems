@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               {site.legalName} (&ldquo;GUTTER FLOW MASTER,&rdquo; &ldquo;we,&rdquo;
               &ldquo;us&rdquo;) respects your privacy. This policy explains how
               we handle information when you visit our website or request gutter
-              services in Minnesota.
+              services in Minnesota, Wisconsin, and North Dakota.
             </p>
 
             <h2 className="text-h3 text-graphite-900">Information we collect</h2>
