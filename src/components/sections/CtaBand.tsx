@@ -19,7 +19,10 @@ export function CtaBand({
   subtitle?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-copper-gradient text-bone">
+    <section
+      id="estimate-form"
+      className="relative overflow-hidden bg-copper-gradient text-bone"
+    >
       <div className="absolute inset-0 bg-grid opacity-[0.08]" aria-hidden />
       <div
         className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-bone/10 blur-3xl"

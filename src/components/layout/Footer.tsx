@@ -116,7 +116,7 @@ export function Footer() {
             © {year} {site.legalName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-bone/80">
+            <Link href="/privacy-policy" className="hover:text-bone/80">
               Privacy Policy
             </Link>
             <Link href="/terms" className="hover:text-bone/80">

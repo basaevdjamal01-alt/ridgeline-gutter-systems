@@ -9,6 +9,7 @@ import { WhyUs } from '@/components/sections/WhyUs';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { ServiceAreasSection } from '@/components/sections/ServiceAreasSection';
 import { Faq } from '@/components/sections/Faq';
+import { ReviewsSection } from '@/components/sections/ReviewsSection';
 import { CtaBand } from '@/components/sections/CtaBand';
 import { site } from '@/lib/site';
 
@@ -31,6 +32,7 @@ export default function HomePage() {  return (
       <Testimonials />
       <ServiceAreasSection />
       <Faq />
+      <ReviewsSection />
       <CtaBand />
     </>
   );
